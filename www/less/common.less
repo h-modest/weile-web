@@ -1,0 +1,156 @@
+*{
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'pavilion';
+  src: url('../tool/ttf/pavilion.TTF');
+}
+
+
+@font-face {
+  font-family: 'pingfang';
+  src: url('../tool/ttf/fzltxhjq.TTF');
+}
+
+body {
+  font-family: "pavilion";
+  &.modal-in {
+    overflow: hidden;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.navigation {
+  height: 70px;
+  // background: rgb(0,4,38);
+  background: url('../image/navigation.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  .list {
+    width: 900px;
+    margin: 0 auto;
+    .logo {
+      float: left;
+      margin-top: 16px;
+      margin-right: 20px;
+    }
+    ul {
+      line-height: 70px;
+      li {
+        float: left;
+        width: 120px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        a {
+          color: #fff;
+          text-decoration: none;
+          display: block;
+        }
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 120px;
+          height: 5px;
+        }
+        &:hover, &.active {
+          text-shadow:0 0 4px rgba(0,155,255,.6),
+              -0 -0 4px rgba(0,155,255,.6);
+          &:after {
+            background: rgb(0,160,233);
+          }
+        }
+      }
+    }
+  }
+}
+.banner {
+  height: 550px;
+}
+
+.banner-fixed {
+  height: 550px;
+  position: relative;
+  &.top-banner {
+    .title {
+      top: 150px;
+    }
+  }
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    .main-title {
+      font-size: 50px;
+    }
+    .sub-title {
+      font-size: 28px;
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+footer {
+  background: rgb(0,4,38);
+  padding: 70px 0;
+  color: #fff;
+  ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    li {
+      flex: 1;
+      line-height: 24px;
+      a {
+        color: #fff;
+      }
+      .title {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      dd {
+        font-size: 14px;
+        line-height: 30px;
+      }
+      .qrcode {
+        height: 70px;
+        margin-top: 10px;
+      }
+      &:last-child {
+        position: relative;
+        p {
+          font-size: 12px;
+        }
+        .copyright {
+          margin-top: 15px;
+          font-size: 12px;
+        }
+        .mark {
+          position: absolute;
+          right: 0;
+          bottom: 10px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

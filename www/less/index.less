@@ -1,0 +1,263 @@
+.index {
+  .content {
+    .module {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      color: rgb(85,85,85);
+      padding: 60px 0;
+      .title {
+        font-size: 28px;
+      }
+      .sub-title {
+        font-size: 14px;
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: rgb(192,192,192);
+          margin: 15px 0;
+        }
+      }
+    }
+    .game {
+      min-height: 600px;
+      .classify {
+        .classify-header {
+          height: 40px;
+          width: 500px;
+          margin: 0 auto;
+          font-size: 22px;
+          text-align: center;
+          line-height: 40px;
+          .class-module {
+            display: inline-block;
+            width: 120px;
+            cursor: pointer;
+            &:hover, &.active {
+              border-bottom: 3px solid #333;
+            }
+            &.class-game {
+              float: left;
+            }
+            &.class-area {
+              float: right;
+            }
+          }
+        }
+        .game-group {
+          margin-top: 30px;
+          position: relative;
+          .listing {
+            position: absolute;
+            left: 45px;
+            width: 900px;
+            text-align: left;
+            overflow: hidden;
+            display: none;
+            &.active {
+              display: block;
+            }
+            .appear-list {
+              transition: all 1s ease-in-out;
+              ul {
+                width: 100vw;
+                &:first-child {
+                  margin-bottom: 30px;
+                  left: 20px;
+                }
+                li {
+                  display: inline-block;
+                  width: 180px;
+                  font-size: 15px;
+                  text-align: center;
+                  a {
+                    color: #333;
+                  }
+                  img {
+                    width: 126px;
+                  }
+                  .game-download {
+                    display: block;
+                    font-size: 12px;
+                    width: 60px;
+                    height: 20px;
+                    border: 1px solid rgb(119,119,119);
+                    color: #999;
+                    border-radius: 10px;
+                    line-height: 20px;
+                    cursor: pointer;
+                    margin: 8px auto;
+                  }
+                }
+              }
+            }
+          }
+          .page {
+            .page-btn {
+              position: absolute;
+              top: 170px;
+              height: 15px;
+              width: 15px;
+              border: 6px solid rgb(169,169,169);
+              cursor: not-allowed;
+              &.active {
+                cursor: pointer;
+                &:hover {
+                  border-color: #999;
+                }
+              }
+              &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 40px;
+                width: 40px;
+                background: #fff;
+                z-index: 100;
+                top: 2px;
+              }
+              &.page-pre {
+                transform: rotate(-135deg);
+                left: 0;
+                &::after {
+                  right: 2px;
+                  transform: rotate(45deg);
+                }
+              }
+              &.page-next {
+                transform: rotate(45deg);
+                right: 0;
+                &::after {
+                  left: -26px;
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .announcement {
+      background: url('../image/announcement.jpg');
+      background-size: cover;
+      padding: 100px;
+      color: #fff;
+      .news-list {
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        li {
+          flex: 1;
+          padding: 0 20px;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+          .title {
+            font-size: 28px;
+            margin-bottom: 25px;
+          }
+          .name {
+            font-size: 34px;
+            line-height: 60px;
+          }
+          .detail {
+            font-size: 15px;
+            text-indent: 2em;
+            line-height: 24px;
+          }
+          &:last-child {
+            padding-left: 40px;
+            margin-left: 20px;
+            border-left: 1px solid #fff;
+            dd {
+              margin-bottom: 15px;
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .activities {
+      .activity-list {
+        display: flex;
+        width: 800px;
+        margin: 40px auto;
+        li {
+          flex: 1;
+          a {
+            color: #333;
+          }
+          img {
+            height: 126px;
+          }
+          .name {
+            margin-top: 10px;
+            font-size: 20px;
+          }
+          .date {
+            font-size: 15px;
+            line-height: 28px;
+            &::after {
+              content: '';
+              display: block;
+              height: 1px;
+              width: 200px;
+              margin: 0 auto;
+              background: rgb(158,158,158)
+            }
+          }
+          .description {
+            font-size: 13px;
+            color: #999;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    .customer {
+      background: rgb(237,237,237);
+      padding: 60px 0;
+      &.step-service {
+        display: block;
+      }
+      .center {
+        width: 900px;
+        display: flex;
+        margin: 0 auto;
+        img {
+          height: 180px;
+        }
+        .introduce {
+          flex: 1;
+          text-align: center;
+          color: #555;
+          .title {
+            font-size: 34px;
+          }
+          .sub-title {
+            font-size: 14px;
+            color: #999;
+          }
+          .tel {
+            font-size: 26px;
+            margin: 25px 0 15px;
+          }
+          .service-center {
+            display: block;
+            width: 180px;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+}

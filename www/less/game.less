@@ -1,0 +1,109 @@
+.game, .area {
+  .game-header {
+    box-shadow: 0 2px 15px rgba(0,0,0,.5);
+    .content-header {
+      width: 800px;
+      margin: 0 auto;
+      padding: 50px 0 40px;
+      .download {
+        display: flex;
+        position: relative;
+        height: 140px;
+        padding-bottom: 70px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 170px;
+          left: -200px;
+          width: 1200px;
+          height: 1px;
+          background: rgb(192,192,192);
+        }
+        .game-icon {
+          width: 140px;
+          height: 140px;
+        }
+        .title {
+          flex: 1;
+          padding: 30px 20px;
+          h2 {
+            font-size: 28px;
+            font-family: 'pingfang';
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 17px;
+          }
+        }
+        .apply-download {
+          display: block;
+          width: 180px;
+          font-size: 28px;
+          color: #fff;
+          height: 50px;
+          text-align: center;
+          background: rgb(18,18,18);
+          line-height: 50px;
+          margin-top: 45px;
+          .download-icon {
+            height: 22px;
+            vertical-align: middle;
+          }
+          .name {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+      .detail {
+        h1 {
+          font-size: 28px;
+          font-family: 'pingfang';
+          margin-bottom: 20px;
+        }
+        p {
+          padding-left: 50px;
+          line-height: 26px;
+          &.main {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    width: 800px;
+    margin: 60px auto 100px;
+    h1 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      font-family: 'pingfang';
+    }
+  }
+}
+
+.game {
+  &.selected {
+    .carousel {
+      padding-left: 120px;
+    }
+    .rotation {
+      .rotation-list,
+      .thumbnail-list {
+        dl, ul {
+          li {
+            &.active {
+              width: 85px !important;
+              height: 150px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .carousel {
+    padding-left: 50px;
+  }
+}

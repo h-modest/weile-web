@@ -1,0 +1,65 @@
+.flip {
+  position: relative;
+  .remarks {
+    font-size: 15px;
+  }
+  .flip-list {
+    position: relative;
+    overflow: hidden;
+    margin-left: 30px;
+    dl {
+      position: absolute;
+      min-width: 100vw;
+      left: 0;
+      transition: all 1s ease-in-out;
+      dd {
+        display: inline-block;
+        height: 80px;
+        border: 1px solid #eee;
+        cursor: pointer;
+        &.active {
+          border-color: #666;
+        }
+      }
+    }
+  }
+  .flip-btn-group {
+    position: absolute;
+    width: 100%;
+    .flip-btn {
+      position: absolute;
+      display: block;
+      top: 10px;
+      width: 20px;
+      height: 60px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      color: #777;
+      font-size: 26px;
+      line-height: 60px;
+      text-align: center;
+      background: #eee;
+      cursor: pointer;
+      &.disabled {
+        cursor: not-allowed;
+        &:hover {
+          color: #777;
+        }
+      }
+      &:hover {
+        color: #444;
+      }
+      &.flip-btn-next {
+        right: -10px;
+        i {
+          margin-left: 2px;
+        }
+      }
+      &.flip-btn-pre {
+        i {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}

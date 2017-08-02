@@ -1,0 +1,23 @@
+{
+  "name": "weile",
+  "description": "shoping-site\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "gulpfile.js",
+  "authors": [
+    "hxq"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "www/tool"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "font-awesome": "^4.7.0",
+    "jquery.lazyload": "^1.9.7"
+  }
+}

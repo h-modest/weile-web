@@ -1,0 +1,126 @@
+.service {
+  .content-header {
+    width: 1200px;
+    border-bottom: 1px solid #ccc;
+    padding: 50px 0;
+    margin: 0 auto 50px;
+    .tel {
+      text-align: center;
+      font-size: 46px;
+      font-family: 'pingfang';
+      margin-bottom: 20px;
+    }
+    .online {
+      display: block;
+      height: 40px;
+      width: 250px;
+      background: rgb(18,18,18);
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 30px;
+      font-family: 'pingfang';
+      line-height: 40px;
+      text-align: center;
+      margin: 0 auto;
+      .icon {
+        vertical-align: middle;
+      }
+      .txt {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .content {
+    padding-bottom: 60px;
+    h1, li h3, .module-field,
+    .answer .answer-content {
+      width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 30px;
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+    ul {
+      li {
+        margin-bottom: 40px;
+        h3 {
+          font-size: 20px;
+        }
+        .module-field {
+          margin-top: 30px;
+          .title {
+            display: inline-block;
+            width: 49%;
+            font-size: 18px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .answer {
+          width: 100vw;
+          background: rgb(238,238,238);
+          margin-top: 30px;
+          display: none;
+          &.active {
+            display: block;
+          }
+          .answer-content {
+            position: relative;
+            display: flex;
+            color: rgb(0,177,55);
+            &.focus {
+              &::before {
+                left: 490px;
+              }
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              top: -25px;
+              left: 40px;
+              width: 0;
+              height: 0;
+              border-left: 25px solid transparent;
+              border-right: 25px solid transparent;
+              border-bottom: 25px solid rgb(238,238,238);
+            }
+            .text-answer {
+              flex: 1;
+              padding: 60px 0;
+              font-size: 18px;
+              line-height: 30px;
+              .explain {
+                margin-bottom: 30px;
+                p {
+                  padding-left: 26px;
+                }
+              }
+              .diagram {
+                img {
+                  width: 60px;
+                }
+              }
+            }
+            .image-answer {
+              width: 400px;
+              padding: 20px 0;
+              min-height: 380px;
+              text-align: center;
+              position: relative;
+              img {
+                max-height: 380px;
+                max-width: 350px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
